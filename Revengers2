@@ -1,0 +1,250 @@
+---[I allow you to skid this 🫵 🎉🎉🎉🥳🤡]--
+repeat task.wait() until game:IsLoaded();
+spawn(function()
+if not _G.isRunning then
+  _G.isRunning = true
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, -20);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Strength: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateStrengthExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local strengthExp = player:WaitForChild("Stats"):WaitForChild("StrengthEXP");
+			textLabel.Text = "Strength: " .. tostring(strengthExp.Value);
+		end
+	end
+	while wait(.1) do
+		updateStrengthExp();
+	end
+end);
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, 0);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Defense: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateDefenseExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local defenseExp = player:WaitForChild("Stats"):WaitForChild("DefenseEXP");
+			textLabel.Text = "Defense: " .. tostring(defenseExp.Value);
+		end
+	end
+	while wait(.1) do
+		updateDefenseExp();
+	end
+end);
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, 30);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Stamina: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateStaminaExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local staminaExp = player:WaitForChild("Stats"):WaitForChild("StaminaEXP");
+			textLabel.Text = "Stamina: " .. tostring(staminaExp.Value);
+		end
+	end
+	while wait(.1) do
+		updateStaminaExp();
+	end
+end);
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, 50);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Speed: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateSpeedExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local speedBoost = player:WaitForChild("Stats"):WaitForChild("SpeedBoost");
+			textLabel.Text = "Speed: " .. tostring(speedBoost.Value);
+		end
+	end
+	while wait(.1) do
+		updateSpeedExp();
+	end
+end);
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, 80);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Fat: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateFatExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local fat = player:WaitForChild("Stats"):WaitForChild("Fat");
+			textLabel.Text = "Fat: " .. tostring(fat.Value);
+		end
+	end
+	while wait(.1) do
+		updateFatExp();
+	end
+end);
+spawn(function()
+	local screenGui = Instance.new("ScreenGui");
+	screenGui.Name = "StatsGui";
+	screenGui.ResetOnSpawn = false;
+	screenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui;
+	local textLabel = Instance.new("TextLabel");
+	textLabel.Name = "StatsTextLabel";
+	textLabel.Position = UDim2.new(0.5, -50, 0, 110);
+	textLabel.Size = UDim2.new(0, 100, 0, 50);
+	textLabel.BackgroundColor3 = Color3.new(1, 1, 1);
+	textLabel.BackgroundTransparency = 1;
+	textLabel.BorderSizePixel = 0;
+	textLabel.Text = "Gym Time: ";
+	textLabel.Font = Enum.Font.SourceSans;
+	textLabel.TextColor3 = Color3.new(0, 0, 0);
+	textLabel.TextSize = 30;
+	textLabel.Parent = screenGui;
+	local function updateGymExp()
+		local player = game:GetService("Players").LocalPlayer;
+		if (player and player.Character) then
+			local gym = player:WaitForChild("Stats"):WaitForChild("GymTime");
+			textLabel.Text = "Gym Time: " .. tostring(gym.Value) .. " Seconds";
+		end
+	end
+	while wait(.1) do
+		updateGymExp();
+	end
+end);
+else
+end
+end)
+spawn(function()
+	while getgenv().MoneyFarm == true do
+		wait(0.1);
+		game:GetService("ReplicatedStorage").Events.DialogueAnswer:InvokeServer("kaoru", "take");
+		wait(1);
+		getgenv().Speed = 130;
+		local Time = (Vector3.new(1683, 45, -1237) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude / getgenv().Speed;
+		local Info = TweenInfo.new(Time, Enum.EasingStyle.Linear);
+		local Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, Info, {CFrame=CFrame.new(Vector3.new(1683, 45, -1237))});
+		Tween:Play();
+		wait(10);
+		fireclickdetector(game:GetService("Workspace").Game.JobStuff.Crates.ClickDetector);
+		getgenv().Speed = 130;
+		local Time = (Vector3.new(923, 40, -1109) - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude / getgenv().Speed;
+		local Info = TweenInfo.new(Time, Enum.EasingStyle.Linear);
+		local Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, Info, {CFrame=CFrame.new(Vector3.new(923, 40, -1109))});
+		Tween:Play();
+		wait(10);
+	end
+end);
+spawn(function()
+	while getgenv().AntiAfk == true do
+		wait(0.1);
+		local vu = game:GetService("VirtualUser");
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame);
+			wait(1);
+			vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame);
+		end);
+	end
+end);
+spawn(function()
+	while getgenv().AutoBuyMembership == true do
+		wait(0.1);
+		game:GetService("ReplicatedStorage").Events.DialogueAnswer:InvokeServer("cashier girl", "take");
+	end
+end);
+spawn(function()
+	while getgenv().SitUps == true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1110.42333984375, 41.10011291503906, -1283.6546630859375);
+		task.wait(0.5);
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game);
+		task.wait(5);
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true;
+		task.wait(3);
+	end
+end);
+spawn(function()
+	while getgenv().Dumbells == true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1046.255859375, 41.00007629394531, -1274.03857421875);
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game);
+		task.wait(5);
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true;
+		task.wait(3);
+	end
+end);
+spawn(function()
+	while getgenv().PushUps == true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1117.763916015625, 41.10011291503906, -1261.59814453125);
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game);
+		task.wait(5);
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true;
+		task.wait(3);
+	end
+end);
+spawn(function()
+	while getgenv().Treadmil == true do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1117.5443115234375, 41.45964431762695, -1231.08935546875);
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game);
+		task.wait(5);
+		game.Players.LocalPlayer.Character.Humanoid.Jump = true;
+		task.wait(3);
+	end
+end);
