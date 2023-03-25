@@ -1,5 +1,13 @@
 ---[I allow you to skid this 🫵 🎉🎉🎉🥳🤡]--
 repeat task.wait() until game:IsLoaded();
+
+spawn(function()
+while getgenv().AutoDeposit == true do
+wait(.1)
+game.Players.LocalPlayer.PlayerGui.MainGui.ATM.Server:InvokeServer("deposit", getgenv().Amount)
+end
+end)
+
 spawn(function()
 if not _G.isRunning then
   _G.isRunning = true
